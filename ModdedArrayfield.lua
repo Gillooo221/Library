@@ -5,6 +5,7 @@ by Meta
 
 Original by Sirius
 Modded by Hosvile
+Fixed by OxyTeam
 
 -------------------------------
 Arrays  | Designing + Programming + New Features
@@ -1828,7 +1829,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 			}
 
 			Section.Title.TextTransparency = 1
-			TweenService:Create(Section.Title, TweenInfo.new(0.7, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+			TweenService:Create(Section.Title, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 
 			function SectionValue:Set(NewSection)
 				Section.Title.Text = NewSection
