@@ -1871,16 +1871,16 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 					Debounce = false
 				else
 					Debounce = true
-					TweenService:Create(Section._UIPadding_, TweenInfo.new(1, Enum.EasingStyle.Quint), {PaddingBottom = UDim.new(0,8)}):Play()
+					TweenService:Create(Section._UIPadding_, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {PaddingBottom = UDim.new(0,8)}):Play()
 					for _, element in ipairs(Section.Holder:GetChildren()) do
 						if element.ClassName == "Frame" then
 							if element.Name ~= "SectionSpacing" and element.Name ~= "Placeholder" and element.Name ~= 'Topholder' and not element:FindFirstChild('ColorPickerIs') then
 								if element.Name == "SectionTitle" then
-									TweenService:Create(element.Title, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+									TweenService:Create(element.Title, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 								else
-									TweenService:Create(element, TweenInfo.new(1, Enum.EasingStyle.Quint), {BackgroundTransparency = 0}):Play()
-									TweenService:Create(element.UIStroke, TweenInfo.new(1, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
-									TweenService:Create(element.Title, TweenInfo.new(1, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+									TweenService:Create(element, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundTransparency = 0}):Play()
+									TweenService:Create(element.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
+									TweenService:Create(element.Title, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 								end
 								for _, child in ipairs(element:GetChildren()) do
 									if (child.ClassName == "Frame" or child.ClassName == "TextLabel" or child.ClassName == "TextBox" or child.ClassName == "ImageButton" or child.ClassName == "ImageLabel") then
@@ -1996,7 +1996,7 @@ function ArrayFieldLibrary:CreateWindow(Settings)
 
 			Paragraph.Content.Size = UDim2.new(0, 438, 0, Paragraph.Content.TextBounds.Y)
 			--Paragraph.Content.Position = UDim2.new(0,465, 0,76)
-			Paragraph.Size = UDim2.new(0,465, 0, Paragraph.Content.TextBounds.Y + 40)
+			Paragraph.Size = UDim2.new(0,465, 0, Paragraph.Content.TextBounds.Y + 80)
 
 			Paragraph.BackgroundTransparency = 1
 			Paragraph.UIStroke.Transparency = 1
